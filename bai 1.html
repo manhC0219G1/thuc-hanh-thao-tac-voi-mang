@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id = "txtvalue">
+<input type="button" onclick="addarray()" value="Add">
+<input type="button" onclick="displayarray()" value="Display">
+<div id="kq"></div>
+<script>
+    let x =0;
+    let array =Array()
+    function addarray(){ https://github.com/manhC0219G1/thuc-hanh-thao-tac-voi-mang.git
+        array[x] = document.getElementById('txtvalue').value;
+        alert("Element:"+array[x]+ "Added at index" + x);
+        x++;
+        document.getElementById("txtvalue").value="";
+    }
+    function displayarray() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("kq").innerHTML = e;
+    }
+</script>
+</body>
+</html>
